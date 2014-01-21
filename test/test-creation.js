@@ -28,7 +28,8 @@ describe('presentation generator', function () {
             '.bowerrc',
             'gulpfile.js',
             'index.html',
-            'scss/main.scss'
+            'scss/main.scss',
+            'js/main.js'
         ];
 
         helpers.mockPrompt(this.app, {
