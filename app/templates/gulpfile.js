@@ -28,7 +28,7 @@ gulp.task('sass', function () {
         .pipe(refresh(server));
 });
 
-gulp.task('markdown', function () {
+gulp.task('generate-steps', function () {
     gulp.src('./steps/*.md')
         .pipe(markdown())
         .pipe(gulp.dest('./steps'))
@@ -81,7 +81,7 @@ gulp.task('watch', function () {
         gulp.run('sass');
     });
     gulp.watch('./steps/*.md', function () {
-        gulp.run('markdown');
+        gulp.run('generate-steps');
     });
     gulp.watch('/js/**/*.js', function () {
         gulp.run('scripts');
