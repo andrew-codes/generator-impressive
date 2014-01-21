@@ -1,12 +1,16 @@
 {
-  "name": "generator-presentation",
+  "name": "generator-impressive",
   "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "description": "A Yeoman genenerator for presentations utilizing impress.js, markdown, code highlighting and more.",
   "keywords": [
-    "yeoman-generator"
+    "yeoman",
+    "yeoman-impressive",
+    "impress.js",
+    "impressjs",
+    "markdown"
   ],
-  "homepage": "https://github.com/softwarecraftsman/generator-presentation",
-  "bugs": "https://github.com/softwarecraftsman/generator-presentation/issues",
+  "homepage": "https://github.com/softwarecraftsman/generate-impressive",
+  "bugs": "https://github.com/softwarecraftsman/generate-impressive/issues",
   "author": {
     "name": "James Andrew Smith",
     "email": "andrew@WeAreSoftwareCraftsmen.com",
@@ -15,7 +19,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/softwarecraftsman/generator-presentation.git"
+    "url": "git://github.com/softwarecraftsman/generator-impressive.git"
   },
   "scripts": {
     "test": "mocha"

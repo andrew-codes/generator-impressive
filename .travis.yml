@@ -3,5 +3,5 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-presentation' ]; then cd .. && eval "mv $currentfolder generator-presentation" && cd generator-presentation; fi
+  - if [ "$currentfolder" != 'generator-impressive' ]; then cd .. && eval "mv $currentfolder generator-impressive" && cd generator-impressive; fi
   - npm install -g gulp

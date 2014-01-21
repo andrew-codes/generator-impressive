@@ -12,7 +12,7 @@ describe('presentation generator', function () {
                 return done(err);
             }
 
-            this.app = helpers.createGenerator('presentation:app', [
+            this.app = helpers.createGenerator('impressive:app', [
                 '../../app'
             ]);
             done();
