@@ -43,6 +43,8 @@ PresentationGenerator.prototype.app = function app() {
     this.copy('gulpfile.js', 'gulpfile.js');
     this.template('index.html', 'index.html');
     this.copy('main.scss', 'scss/main.scss');
+    this.copy('main.js', 'js/main.js');
+    this.mkdir('steps');
 };
 
 PresentationGenerator.prototype.projectfiles = function projectfiles() {
