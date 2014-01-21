@@ -29,7 +29,9 @@ describe('presentation generator', function () {
             'gulpfile.js',
             'index.html',
             'scss/main.scss',
-            'js/main.js'
+            'js/main.js',
+            'steps/start.html',
+            'steps/steps.json'
         ];
 
         helpers.mockPrompt(this.app, {
