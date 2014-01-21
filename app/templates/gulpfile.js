@@ -32,7 +32,7 @@ gulp.task("connect", function () {
         .use(express.static(path.resolve('./')))
         .use(express.directory(path.resolve('./')))
         .use(lr.middleware({ app: app }))
-        .listen(8080);
+        .listen(9000);
 });
 
 gulp.task('watch', function () {
