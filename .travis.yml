@@ -5,4 +5,4 @@ node_js:
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-presentation' ]; then cd .. && eval "mv $currentfolder generator-presentation" && cd generator-presentation; fi
-
+  - npm install -g gulp
