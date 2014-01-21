@@ -36,7 +36,13 @@ gulp.task("connect", function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./scss/**/*.scss', function () {
+    gulp.watch([
+        './index.html',
+        './js/**/*.js',
+        './scss/**/*.scss',
+        './steps/*.html',
+        'steps/list.json'
+    ], function () {
         gulp.run('sass');
     });
 });
