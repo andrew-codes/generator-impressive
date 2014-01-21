@@ -1,5 +1,16 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+    "name": "<%= _.slugify(presentationTitle) %>",
+    "version": "0.0.0",
+    "dependencies": {
+        "gulp": "~3.4.0",
+        "bower": "~0.9.2",
+        "gulp-livereload": "~0.2.0",
+        "tiny-lr": "~0.0.5",
+        "gulp-sass": "~0.4.1",
+        "express": "~3.4.8",
+        "gulp-embedlr": "~0.5.2"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
 }

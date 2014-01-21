@@ -23,7 +23,12 @@ describe('presentation generator', function () {
         var expected = [
             // add files you expect to exist here.
             '.jshintrc',
-            '.editorconfig'
+            '.editorconfig',
+            '.gitignore',
+            '.bowerrc',
+            'gulpfile.js',
+            'index.html',
+            'scss/main.scss'
         ];
 
         helpers.mockPrompt(this.app, {
