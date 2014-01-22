@@ -1,7 +1,7 @@
 'use strict';
 
-var StepAppender = module.exports = function StepAppender(filename, id) {
-    this.filename = filename;
+var StepAppender = module.exports = function StepAppender(id) {
+    this.filename = id + '.html';
     this.id = id;
 };
 

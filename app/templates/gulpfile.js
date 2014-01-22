@@ -89,7 +89,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function () {
-    gulp.run('livereload', 'connect', 'sass', 'scripts', 'watch');
+    gulp.run('livereload', 'connect', 'sass', 'scripts', 'generate-steps', 'watch');
 });
 
 

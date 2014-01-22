@@ -11,7 +11,7 @@ var StepGenerator = module.exports = function StepGenerator(args, options, confi
     config = config || require(path.join(process.cwd(), '/config.json'));
     this.id = this._.slugify(this.name);
     this.filename = this.id + '.md';
-    this.appender = new StepAppender(this.filename, this.id);
+    this.appender = new StepAppender(this.id);
 };
 
 util.inherits(StepGenerator, yeoman.generators.NamedBase);

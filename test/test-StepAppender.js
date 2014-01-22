@@ -10,7 +10,7 @@ describe('StepAppender', function () {
     var steps;
 
     beforeEach(function () {
-        sut = new SUT('file_01.md', 'file_01');
+        sut = new SUT('file_01');
     });
 
     describe('given no existing steps', function () {
@@ -35,7 +35,7 @@ describe('StepAppender', function () {
         beforeEach(function () {
             steps = [
                 {
-                    uri: 'file_00.md',
+                    uri: 'file_00.html',
                     id: 'file_00',
                     class: '',
                     data: {
