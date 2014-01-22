@@ -41,6 +41,7 @@ PresentationGenerator.prototype.app = function app() {
     this.template('_bower.json', 'bower.json');
     this.copy('gitignore', '.gitignore');
     this.copy('gulpfile.js', 'gulpfile.js');
+    this.template('_config.json', 'config.json');
     this.template('index.html', 'index.html');
     this.copy('main.scss', 'scss/main.scss');
     this.copy('main.js', 'js/main.js');

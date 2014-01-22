@@ -26,6 +26,7 @@ describe('presentation generator', function () {
             '.editorconfig',
             '.gitignore',
             '.bowerrc',
+            'config.json',
             'gulpfile.js',
             'index.html',
             'scss/main.scss',
@@ -35,7 +36,7 @@ describe('presentation generator', function () {
         ];
 
         helpers.mockPrompt(this.app, {
-            'someOption': true
+            'presentationTitle': 'My First Presentation'
         });
         this.app.options['skip-install'] = true;
         this.app.run({}, function () {
