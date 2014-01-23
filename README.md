@@ -1,47 +1,93 @@
-# generator-presentation [![Build Status](https://secure.travis-ci.org/softwarecraftsman/generator-presentation.png?branch=master)](https://travis-ci.org/softwarecraftsman/generator-presentation)
+# generator-impressive [![Build Status](https://secure.travis-ci.org/softwarecraftsman/generator-presentation.png?branch=master)](https://travis-ci.org/softwarecraftsman/generator-presentation)
 
-A generator for [Yeoman](http://yeoman.io).
+An impress.js presentation generator for [Yeoman](http://yeoman.io).
+
+## Features
+* Content of steps support markdown
+* Fenced code blocks support syntax highlighting
+* Utilizes [gulp](http://gulpjs.com) to run the presentation
 
 
 ## Getting Started
 
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+### Installation
 
 ```
-$ npm install -g yo
+$ npm install -g generator-impressive
 ```
 
-### Yeoman Generators
+### Creating a New Presentation
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-presentation from npm, run:
+Create a directory for your new presentation and change into the directory.
 
 ```
-$ npm install -g generator-presentation
+$ mkdir my-new-presentation
+$ cd my-new-presentation
 ```
 
-Finally, initiate the generator:
+Now, use the impressive generator to create the presentation
 
 ```
-$ yo presentation
+$ yo impressive
 ```
 
-### Getting To Know Yeoman
+and you will be asked for the title of your new presentation. It should generate the following structure:
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+```
+bower.json
+index.html
+scss
+bower_components
+js
+steps
+config.json
+node_modules
+gulpfile.js
+package.json
+```
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+### Running Your Presentation
+
+```
+$ gulp
+```
+
+Now open a browser and navigate to http://localhost:9000 to view your presentation.
+
+### Adding Presentation Steps (Content)
+
+Each step is it's own markdown or HTML file in the `/steps` directory and is registered with the presentation in the `/steps/steps.json` file. However, you can easily create new steps and automatically have them registered with the following command; providing it with the new step's title:
+
+```
+$ yo impressive:step 'My First Content Step'
+```
+
+This will add a `/steps/my-first-content-step.md` file that you can then update with your content and automatically
+append the step to the presentation in the `/steps/steps.json`.
+
+### Controlling the Transitions
+
+Transitions between steps are controlled via the `/steps/steps.json` file.
+
+
+### Adding Your Own Style
+
+You can style your presentation using [Sass](http://sass-lang.com). The main Sass file that is included is the
+`/scss/main.scss` file. Feel free to add styles there or add new Sass files and import them into the `main.scss`.
 
 
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+## Contribute
+
+Feel free to send me a pull request or log an issue.
+
+Code: https://github.com/softwarecraftsman/generate-impressive
+Issues: https://github.com/softwarecraftsman/generate-impressive/issues
+
+## Credits
+
+I have to give credit to the original [generator-impress](https://github.com/bbaaxx/generator-impress) for my inspiration. This is my first nodejs module and I
+used the [generator-impress](https://github.com/bbaaxx/generator-impress) as a starting point.
