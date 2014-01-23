@@ -12,7 +12,7 @@ An impress.js presentation generator for [Yeoman](http://yeoman.io).
 
 ### Installation
 
-```
+```bash
 $ npm install -g generator-impressive
 ```
 
@@ -20,20 +20,20 @@ $ npm install -g generator-impressive
 
 Create a directory for your new presentation and change into the directory.
 
-```
+```bash
 $ mkdir my-new-presentation
 $ cd my-new-presentation
 ```
 
 Now, use the impressive generator to create the presentation
 
-```
+```bash
 $ yo impressive
 ```
 
 and you will be asked for the title of your new presentation. It should generate the following structure:
 
-```
+```bash
 bower.json
 index.html
 scss
@@ -48,7 +48,7 @@ package.json
 
 ### Running Your Presentation
 
-```
+```bash
 $ gulp
 ```
 
@@ -58,7 +58,7 @@ Now open a browser and navigate to http://localhost:9000 to view your presentati
 
 Each step is it's own markdown or HTML file in the `/steps` directory and is registered with the presentation in the `/steps/steps.json` file. However, you can easily create new steps and automatically have them registered with the following command; providing it with the new step's title:
 
-```
+```bash
 $ yo impressive:step 'My First Content Step'
 ```
 
@@ -84,8 +84,8 @@ You can style your presentation using [Sass](http://sass-lang.com). The main Sas
 
 Feel free to send me a pull request or log an issue.
 
-Code: https://github.com/softwarecraftsman/generate-impressive
-Issues: https://github.com/softwarecraftsman/generate-impressive/issues
+* Code: https://github.com/softwarecraftsman/generate-impressive
+* Issues: https://github.com/softwarecraftsman/generate-impressive/issues
 
 ## Credits
 
