@@ -1,4 +1,4 @@
-# generator-impressive [![Build Status](https://secure.travis-ci.org/softwarecraftsman/generator-presentation.png?branch=master)](https://travis-ci.org/softwarecraftsman/generator-presentation)
+# generator-impressive [![Build Status](https://secure.travis-ci.org/softwarecraftsman/generator-impressive.png?branch=master)](https://travis-ci.org/softwarecraftsman/generator-presentation)
 
 An impress.js presentation generator for [Yeoman](http://yeoman.io).
 
