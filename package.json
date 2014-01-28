@@ -1,9 +1,10 @@
 {
   "name": "generator-impressive",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Yeoman genenerator for presentations utilizing impress.js, markdown, code highlighting and more.",
   "keywords": [
     "yeoman",
+    "yeoman-generator"
     "yeoman-impressive",
     "impress.js",
     "impressjs",
