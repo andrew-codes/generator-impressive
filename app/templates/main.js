@@ -22,7 +22,7 @@
                 var templ = htmltempl;
                 console.log(step);
                 $.ajax({
-                    url: '/steps/' + step.uri,
+                    url: '/tmp/steps/' + step.uri,
                     success: function (data) {
                         $('.steps').append(templ({file: data, data: step.data,
                             class: step.class, id: step.id}));

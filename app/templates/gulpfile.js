@@ -24,14 +24,14 @@ marked.setOptions({
 gulp.task('sass', function () {
     gulp.src('./scss/*.scss')
         .pipe(sass({includePaths: ['scss/includes']}))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./tmp/css'))
         .pipe(refresh(server));
 });
 
 gulp.task('generate-steps', function () {
     gulp.src('./steps/*.md')
         .pipe(markdown())
-        .pipe(gulp.dest('./steps'))
+        .pipe(gulp.dest('./tmp/steps'))
 });
 
 gulp.task('scripts', function () {
@@ -54,7 +54,7 @@ gulp.task('scripts', function () {
         }))
         .pipe(concat('presentation-bundle.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./tmp/js'));
 });
 
 gulp.task('livereload', function () {
