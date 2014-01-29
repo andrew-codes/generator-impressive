@@ -31,7 +31,7 @@ describe('presentation generator', function () {
             'index.html',
             'scss/main.scss',
             'js/main.js',
-            'steps/start.html',
+            'steps/start.md',
             'steps/steps.json'
         ];
 

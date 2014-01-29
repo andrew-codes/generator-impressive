@@ -46,7 +46,7 @@ PresentationGenerator.prototype.app = function app() {
     this.copy('main.scss', 'scss/main.scss');
     this.copy('main.js', 'js/main.js');
     this.copy('steps.json', 'steps/steps.json');
-    this.template('start.html', 'steps/start.html');
+    this.template('start.md', 'steps/start.md');
 };
 
 PresentationGenerator.prototype.projectfiles = function projectfiles() {
