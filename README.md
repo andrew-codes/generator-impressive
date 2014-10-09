@@ -5,75 +5,51 @@ An impress.js presentation generator for [Yeoman](http://yeoman.io).
 ## Features
 * Content of steps support markdown
 * Fenced code blocks support syntax highlighting
-* Utilizes [gulp](http://gulpjs.com) to run the presentation
+* Utilizes LESS for styling
+* Pushes content/style updates to all local browsers viewing the presentation
 
-
-## Getting Started
+## Getting Started Guide
 
 ### Installation
 
 ```bash
-$ npm install -g generator-impressive
+$ npm install generator-impressive
 ```
 
-### Creating a New Presentation
-
-Create a directory for your new presentation and change into the directory.
-
-```bash
-$ mkdir my-new-presentation
-$ cd my-new-presentation
-```
-
-Now, use the impressive generator to create the presentation
+### Create a New Presentation
 
 ```bash
 $ yo impressive
 ```
 
-and you will be asked for the title of your new presentation. It should generate the following structure:
-
-```bash
-bower.json
-index.html
-scss
-bower_components
-js
-steps
-config.json
-node_modules
-gulpfile.js
-package.json
-```
-
 ### Running Your Presentation
 
 ```bash
-$ gulp
+$ npm start
 ```
 
-Now open a browser and navigate to http://localhost:9000 to view your presentation.
+Now open a browser and navigate to http://localhost:3000 to view your presentation.
 
 ### Adding Presentation Steps (Content)
 
-Each step is it's own markdown or HTML file in the `/steps` directory and is registered with the presentation in the `/steps/steps.json` file. However, you can easily create new steps and automatically have them registered with the following command; providing it with the new step's title:
+Each step is it's own markdown file in the `/steps` directory and is registered with the presentation in the `/steps/_steps.json` file. However, you can easily create new steps and automatically have them registered with the following command; providing it with the new step's title:
 
 ```bash
 $ yo impressive:step 'My First Content Step'
 ```
 
-This will add a `/steps/my-first-content-step.md` file that you can then update with your content and automatically
-append the step to the presentation in the `/steps/steps.json`.
+This will add a `/steps/my-first-content-step.md` file that you can then update with your content. The new step is automatically
+appended to the presentation in the `/steps/_steps.json`.
 
 ### Controlling the Transitions
 
-Transitions between steps are controlled via the `/steps/steps.json` file.
+Transitions between steps are controlled via the `/steps/_steps.json` file.
 
 
 ### Adding Your Own Style
 
-You can style your presentation using [Sass](http://sass-lang.com). The main Sass file that is included is the
-`/scss/main.scss` file. Feel free to add styles there or add new Sass files and import them into the `main.scss`.
+You can style your presentation using LESS. The main LESS file that is included is the
+`/styles/index.less` file. Feel free to add styles there or add new LESS files and import them into the `index.less`.
 
 
 ## License

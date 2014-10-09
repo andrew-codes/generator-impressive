@@ -1,7 +1,7 @@
 'use strict';
 
 var StepAppender = module.exports = function StepAppender(id) {
-    this.filename = id + '.html';
+    this.filename = id + '.md';
     this.id = id;
 };
 
@@ -20,7 +20,7 @@ StepAppender.prototype.appendStepsTo = function (steps) {
         {
             uri: this.filename,
             id: this.id,
-            class: 'step',
+            className: '',
             data: {
                 x: X,
                 y: Y,

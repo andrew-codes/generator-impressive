@@ -2,7 +2,9 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
-
+var _ = require('underscore');
+var glob = require('glob');
+var util = require('util');
 
 var PresentationGenerator = module.exports = function PresentationGenerator(args, options, config) {
     yeoman.generators.Base.apply(this, arguments);
@@ -13,7 +15,6 @@ var PresentationGenerator = module.exports = function PresentationGenerator(args
 
     this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
-
 util.inherits(PresentationGenerator, yeoman.generators.Base);
 
 PresentationGenerator.prototype.askFor = function askFor() {
@@ -41,12 +42,27 @@ PresentationGenerator.prototype.app = function app() {
     this.template('_bower.json', 'bower.json');
     this.copy('gitignore', '.gitignore');
     this.copy('gulpfile.js', 'gulpfile.js');
-    this.template('_config.json', 'config.json');
-    this.template('index.html', 'index.html');
-    this.copy('main.scss', 'scss/main.scss');
-    this.copy('main.js', 'js/main.js');
-    this.copy('steps.json', 'steps/steps.json');
+    this.copy('config.js', 'config.js');
+    this.copy('index.html.mustache', 'web/index.html.mustache');
+    this.copy('main.less', 'styles/index.less');
+    this.copy('main.js', 'scripts/index.js');
+    this.copy('steps.json', 'steps/_steps.json');
     this.template('start.md', 'steps/start.md');
+
+    // ImpressConsole
+    this.copy('impressConsole.js', 'scripts/impressConsole.js');
+    this.copy('impressConsole.less', 'styles/console.less');
+    this.copy('impressConsole.license.txt', 'impressConsole.license.txt');
+
+    // Build Related
+    this.copy('build/tasks/browserSync.js', 'build/tasks/browserSync.js');
+    this.copy('build/tasks/build.js', 'build/tasks/build.js');
+    this.copy('build/tasks/markup.js', 'build/tasks/markup.js');
+    this.copy('build/tasks/scripts.js', 'build/tasks/scripts.js');
+    this.copy('build/tasks/styles.js', 'build/tasks/styles.js');
+    this.copy('build/util/bundleLogger.js', 'build/util/bundleLogger.js');
+    this.copy('build/util/handleErrors.js', 'build/util/handleErrors.js');
+
 };
 
 PresentationGenerator.prototype.projectfiles = function projectfiles() {

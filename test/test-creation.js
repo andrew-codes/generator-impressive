@@ -32,7 +32,10 @@ describe('presentation generator', function () {
             'scss/main.scss',
             'js/main.js',
             'steps/start.md',
-            'steps/steps.json'
+            'steps/steps.json',
+            'js/impressConsole.js',
+            'scss/console.scss',
+            'impressConsole.license.txt'
         ];
 
         helpers.mockPrompt(this.app, {

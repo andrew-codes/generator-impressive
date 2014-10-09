@@ -4,16 +4,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=1024"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <title><%= presentationTitle %></title>
+    <title>{{ title }}</title>
 
     <meta name="description" content=""/>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic"
           rel="stylesheet"/>
 
-    <link href="bower_components/impress.js/css/impress-demo.css" rel="stylesheet"/>
-    <link href="tmp/css/impressConsole.css" rel="stylesheet"/>
-    <link href="tmp/css/main.css" rel="stylesheet"/>
+    <link href="{{{css}}}" rel="stylesheet"/>
 
     <link rel="shortcut icon" href="favicon.png"/>
     <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
@@ -22,14 +20,12 @@
 <body>
 
 <ul id="impress" class="steps">
+    {{#steps}}
+        <li id="{{id}}" class="step {{className}}"{{#data}} data-{{name}}="{{value}}"{{/data}}>{{{content}}}</li>
+    {{/steps}}
 </ul>
 
-<script src="tmp/js/impressConsole.js"></script>
-<script src="tmp/js/presentation-bundle.js"></script>
-
-<script id="step-template" type="x-handlebars-template">
-    <li id="{{id}}" class="step {{class}}"{{#step data}}{{uri}}{{/step}}>{{{file}}}</li>
-</script>
+<script src="{{{js}}}"></script>
 
 </body>
 </html>

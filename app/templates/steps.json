@@ -1,8 +1,8 @@
 [
     {
-        "uri": "start.html",
+        "uri": "start.md",
         "id": "title",
-        "class": "title",
+        "className": "title",
         "data": {
             "x": 0,
             "y": 0,
